@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tính hoa hồng nhận được tùy vào doanh số bán hàng</title>
+</head>
+<body>
+<h1>Bài 6:</h1>
+<button onclick="calMoney()">Tính hoa hồng</button>
+<h2 id="result" style="color: #3498db"></h2>
+</body>
+<script>
+    function calMoney(){
+        let sales = +prompt("Doanh số bán hàng là :");
+        let money1 = (sales*20)/ 100;
+        let money2 = (sales*10)/100;
+        let money3 = (sales*5)/100;
+        if(sales > 300){
+            document.getElementById("result").innerHTML = "Hoa hồng bạn nhận được là : " + money1;
+        }else if(sales  >= 100){
+            document.getElementById("result").innerHTML = "Hoa hồng bạn nhận được là : " + money2;
+        }else if(sales >= 50){
+            document.getElementById("result").innerHTML = "Hoa hồng bạn nhận được là : " + money3;
+        }else{
+            document.getElementById("result").innerHTML = "Rất tiếc , doanh số bạn không đạt !"
+        }
+
+    }
+
+
+
+</script>
+</html>
